@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    background-color:lightyellow;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+
+
+  th {
+    text-align: center;
+  }
+
+h1 {
+    color: #052561;
+    font-size: 28px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: #672d2d;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/library.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" /> 
+    
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable();
+            $('#addButton').click(function() {
+                var sNo = $('#sNoInput').val();
+                var title = $('#titleInput').val();
+                var author = $('#authorInput').val();
+                var subject = $('#subjectInput').val();
+                var publishDate = $('#publishDateInput').val();
+
+                var newRow = $('<tr>');
+                newRow.append('<td>' + sNo + '</td>');
+                newRow.append('<td>' + title + '</td>');
+                newRow.append('<td>' + author + '</td>');
+                newRow.append('<td>' + subject + '</td>');
+                newRow.append('<td>' + publishDate + '</td>');
+
+                $('#example tbody').append(newRow);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>LIBRARY MANAGEMENT</h1>
+
+    <h3>A library is not a luxury but one of the necessities of life!<br>Love is a book that never closes!</h3>
+   
+    <table border="1" id="example" class="hover">
+        <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>TITLE</th>
+                <th>AUTHOR</th>
+                <th>SUBJECT</th>
+                <th>PUBLISH DATE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>It Ends with Us</td>
+                <td>Colleen Hoover</td>
+                <td>Romance</td>
+                <td>18.10.2022</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The Kite Runner</td>
+                <td>Khaled Hosseini</td>
+                <td>Historical fiction</td>
+                <td>27.04.2004</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The Lord of the Rings</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Fantasy</td>
+                <td>29.07.1954</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Verity</td>
+                <td>Colleen Hoover</td>
+                <td>Thriller</td>
+                <td>07.12.2018</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Harry Potter and the Sorcerer's Stone</td>
+                <td>J.K. Rowling</td>
+                <td>Fantasy</td>
+                <td>20.09.1998</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Archer's Voice</td>
+                <td>Mia Sheridan</td>
+                <td>Romance</td>
+                <td>25.01.2014</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Reminders of Him</td>
+                <td>Colleen Hoover</td>
+                <td>Romance</td>
+                <td>17.09.2019</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>A goode girl's guide to murder</td>
+                <td>Holly Jackson</td>
+                <td>Crime Thriller</td>
+                <td>26.06.2018</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>The sky is falling</td>
+                <td>Sydney Seldom</td>
+                <td>Thriller</td>
+                <td>12.06.2015</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Murder of Roger Ackroyd</td>
+                <td>Agatha Christie</td>
+                <td>Mystery</td>
+                <td>08.10.2017</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>I too had a love story</td>
+                <td>Ravinder Singh</td>
+                <td>Romance</td>
+                <td>29.08.2016</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>It starts with us</td>
+                <td>Colleen Hoover</td>
+                <td>Romance</td>
+                <td>04.06.2022</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>The love hypothesis</td>
+                <td>Ali Hazelwood</td>
+                <td>Romance</td>
+                <td>16.01.2022</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Twisted Games</td>
+                <td>Ana Huang</td>
+                <td>Romance</td>
+                <td>05.06.2022</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Dan Brown</td>
+                <td>Angels & Demons</td>
+                <td>Adventures</td>
+                <td>03.05.2005</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <input type="text" id="sNoInput" placeholder="S.NO">
+    <input type="text" id="titleInput" placeholder="Title">
+    <input type="text" id="authorInput" placeholder="Author">
+    <input type="text" id="subjectInput" placeholder="Subject">
+    <input type="text" id="publishDateInput" placeholder="Publish Date">
+    <button id="addButton">Add</button>
+
+    
+</body>
+</html>
